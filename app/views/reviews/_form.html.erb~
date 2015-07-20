@@ -1,0 +1,12 @@
+         <%= form_for(Review.new, remote:true, html: { class: 'horizontal-form'}) do |f| %>
+
+ 	    <div class="field">
+ 	      <%= f.label :rating %><br>
+  	      <%= f.number_field :rating, min: 0, max: 5 %>
+ 	   </div>
+ 	   <div class="field">
+ 	     <%= f.label :comment %><br>
+ 	     <%= f.text_area :comment %>
+ 	   </div>
+
+          <% end %>

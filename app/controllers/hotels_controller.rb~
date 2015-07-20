@@ -4,7 +4,6 @@ class HotelsController < ApplicationController
   # GET /hotels
   # GET /hotels.json
   def index
-    @reviews = Review.all
     @hotels = Hotel.all
   end
 

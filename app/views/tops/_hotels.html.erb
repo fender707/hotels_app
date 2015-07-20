@@ -19,6 +19,11 @@
         <div>
 	  <p><%= hotel.rating %>/5</p>
         </div>
+ 	
+        <div class="review">
+	  <p><%= link_to "Add comment",new_review_path,  :class => 'btn btn-default' %></p>
+	 
+        </div>
       </div>
 
   <% end %>
