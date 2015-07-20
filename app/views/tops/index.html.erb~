@@ -1,0 +1,4 @@
+<h1>Top products</h1>
+  <div class="hotels">
+    <%= render 'hotels' %>
+  </div>

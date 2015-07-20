@@ -1,0 +1,24 @@
+
+  <% @hotels.each do |hotel| %>
+
+      <div class='main_p'>
+        <%= image_tag(hotel.image) %>
+        <div class="one">
+          <h3><%= hotel.name %></h3>
+          <p class="desc"><%= sanitize(hotel.description) %></p>
+        </div>  
+        <div class="price_line">
+          <span class="price"><%= number_to_currency(hotel.price) %>  
+        </div> 
+        <div>
+	  <p><%= hotel.breakfast %></p>
+        </div>
+        <div>
+	  <p><%= hotel.address %></p>
+        </div>
+        <div>
+        </div>
+      </div>
+
+  <% end %>
+
