@@ -52,14 +52,14 @@
               <li><%= link_to "Top", root_path  %></li>
               <% if user_signed_in? %>
                  <li>
-                   <%= link_to "Logout" ,destroy_user_session_path, method: :delete, :class => "my" %></li>
+                   <%= link_to "Logout" ,destroy_user_session_path, method: :delete %></li>
                  </li>
 		 <li class="loginn">
                    Logged in as <%= current_user.email.split("@").first %>
                  </li>
                <% else %>
                  <li>
-                 <%= link_to "Login", new_user_session_path, :class => "my" %>
+                 <%= link_to "Login", new_user_session_path %>
                  </li>
                <% end %>
               <li><%= link_to "Link3", "/path3"  %></li>

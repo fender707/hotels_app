@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :rating %><br>
-    <%= f.number_field :rating %>
+    <%= f.number_field :rating, min:0, max: 5 %>
   </div>
   <div class="field">
     <%= f.label :breakfast %><br>
@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :photo %><br>
-    <%= f.text_field :photo %>
+    <%= f.file_field :photo %>
   </div>
   <div class="field">
     <%= f.label :address %><br>
