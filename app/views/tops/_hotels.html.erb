@@ -17,7 +17,7 @@
 	  <p><%= hotel.address %></p>
         </div>
         <div>
-	  <p><%= hotel.rating %>/5</p>
+	  <p><%= hotel.reviews.average("rating") %>/5</p>
         </div>
         <div class="review">
           <p><%= link_to "Add comment",new_hotel_review_path( hotel_id: hotel.id),  :class => 'btn btn-default' %></p> 

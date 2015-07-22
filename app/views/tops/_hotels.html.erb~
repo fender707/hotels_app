@@ -17,10 +17,10 @@
 	  <p><%= hotel.address %></p>
         </div>
         <div>
-	  <p><%= hotel.rating %>/5</p>
+	  <p><%= hotel.reviews.total_rating %>/5</p>
         </div>
         <div class="review">
-          <p><%= link_to "Add comment",new_hotel_review_path( reviews :hotel_id),  :class => 'btn btn-default' %></p> 
+          <p><%= link_to "Add comment",new_hotel_review_path( hotel_id: hotel.id),  :class => 'btn btn-default' %></p> 
         </div>
 	 <%= hotel.reviews.each do |review| %>
            <div>

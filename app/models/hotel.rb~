@@ -1,7 +1,11 @@
 class Hotel < ActiveRecord::Base
  
-  has_many: reviews  
+  has_many :reviews  
 
   mount_uploader :photo, ImageUploader
   
+  def total_rating
+    hotel.rating.to_a.sum 
+  end
+
 end

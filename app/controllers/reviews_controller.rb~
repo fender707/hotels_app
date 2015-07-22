@@ -7,13 +7,13 @@ class ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = Review.all
+    
     @hotels = Hotel.all
   end
 
   def create
-    @hotel = Hotel.find(params[:hotel_id])
-    @review = @hotel.reviews.create(review_params)
+    hotel = Hotel.find(params[:hotel_id])
+    @review = hotel.reviews.create(review_params)
     @review.title = current_user.email
     respond_to do |format|
     if @review.save
