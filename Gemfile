@@ -43,11 +43,13 @@ end
 group :test do
   gem 'rspec-rails'
   gem 'database_cleaner'
-  gem 'shoulda-matchers'
   gem 'webmock'
-  gem 'factory_girl_rails'
+  gem 'shoulda-matchers', require: false
+
   gem 'faker'
 end
+  gem 'factory_girl_rails', '~> 4.5.0', group: [:development, :test]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
