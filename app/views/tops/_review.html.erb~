@@ -1,0 +1,11 @@
+ <%= @hotels.reviews.each do |review| %>
+    <div>
+       <p><%= review.title %></p>
+    </div>
+    <div>
+      <p><%= review.rating %></p>
+    </div>
+    <div>
+      <p><%= review.comment %></p>
+    </div>
+ <% end %>

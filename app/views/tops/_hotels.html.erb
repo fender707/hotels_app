@@ -19,12 +19,21 @@
         <div>
 	  <p><%= hotel.rating %>/5</p>
         </div>
- 	
         <div class="review">
-	  <p><%= link_to "Add comment",new_review_path,  :class => 'btn btn-default' %></p>
-	 
+          <p><%= link_to "Add comment",new_hotel_review_path( hotel_id: hotel.id),  :class => 'btn btn-default' %></p> 
         </div>
+	 <%= hotel.reviews.each do |review| %>
+           <div>
+             <p><%= review.title %></p>
+           </div>
+           <div>
+             <p><%= review.rating %></p>
+           </div>
+           <div>
+              <p><%= review.comment %></p>
+           </div>
+        <% end %>
       </div>
-
+      
   <% end %>
 

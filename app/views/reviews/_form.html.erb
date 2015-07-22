@@ -1,4 +1,4 @@
-         <%= form_for(Review.new, remote:true, html: { class: 'horizontal-form'}) do |f| %>
+         <%= form_for([@hotel,@review], html: { class: 'horizontal-form'}) do |f| %>
 
  	    <div class="field">
  	      <%= f.label :rating %><br>

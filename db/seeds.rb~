@@ -5,21 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-Review.destroy_all
-Hotel.destroy_all
-
-Hotel.create!([
-
-{
-
-  name: 'Luxury',
-  rating: 4,
-  breakfast: true,
-  description: 'Not bad! but not good =)',
-  price: 40,
-  address: "Institutska 18"
-}
-
-
-])
