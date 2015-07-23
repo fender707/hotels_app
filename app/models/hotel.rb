@@ -6,4 +6,8 @@ class Hotel < ActiveRecord::Base
   validates :name, presence: true, length: {maximum: 50}
   validates :rating, presence: true, length: {maximum: 5}
 
+  def self.latest
+    Hotel.order(:updated_at).last
+  end
+
 end
