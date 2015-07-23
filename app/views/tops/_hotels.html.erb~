@@ -1,6 +1,5 @@
 
-  <%= @hotels.each do |hotel| %>
-
+    <%= @hotels.each do |hotel| %
       <div class='main_p'>
         <%= image_tag(hotel.photo) %>
         <div class="one">
@@ -20,7 +19,7 @@
 	  <p><%= hotel.reviews.average("rating") %>/5</p>
         </div>
         <div class="review">
-          <p><%= link_to "Add comment", new_hotel_review_path( hotel_id: hotel.id),  :class => 'btn btn-default' %></p> 
+          <p><%= link_to "Add comment", new_hotel_review_path(hotel_id: hotel.id),  :class => 'btn btn-default' %></p> 
         </div>
 	 <%= hotel.reviews.each do |review| %>
            <div>
@@ -35,5 +34,5 @@
         <% end %>
       </div>
       
-  <% end %>
+    <% end %>
 
