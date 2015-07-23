@@ -41,11 +41,11 @@ group :doc do
 end
 
 group :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0' 
   gem 'database_cleaner'
   gem 'webmock'
-  gem 'shoulda-matchers', require: false
-
+  gem 'shoulda-matchers', require: false 
+  gem 'shoulda'
   gem 'faker'
 end
   gem 'factory_girl_rails', '~> 4.5.0', group: [:development, :test]

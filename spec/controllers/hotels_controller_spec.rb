@@ -1,5 +1,5 @@
-
 require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe HotelsController, type: :controller do
 
@@ -86,4 +86,5 @@ RSpec.describe HotelsController, type: :controller do
 
   end
 end
+
 
