@@ -1,8 +1,9 @@
 require 'spec_helper'
+require 'shoulda/matchers'
 
 RSpec.describe Hotel, type: :model do
  
-  it { is_expected.to have_many(:reviews) }
+  it { should has_many(:reviews) }
 
 
 

@@ -21,10 +21,6 @@ RSpec.describe HotelsController, type: :controller do
     end
   
   describe "GET #index" do
-    it "assigns the requested hotel to new hotel" do
-      get :index
-      expect(assigns(:hotels)).to eq([subject])
-    end
 
     it "renders the :index view" do
       get :index
