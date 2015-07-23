@@ -1,6 +1,6 @@
-
+<% cache ['hotel', Hotel.latest] do %>
   <%= @hotels.each do |hotel| %>
-
+  <% cache ['main_p', hotel] do%>
       <div class='main_p'>
         <%= image_tag(hotel.photo) %>
         <div class="one">
@@ -33,6 +33,8 @@
              <p><%= review.comment %></p>
            </div>
         <% end %>
-      </div> 
+      </div>
+  <% end %>  
   <% end %>
+<% end %>
 
